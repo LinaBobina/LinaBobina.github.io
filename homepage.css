@@ -1,4 +1,9 @@
-body {background-color: rgba(204, 220, 240);}
+body {
+    background-image: url("Images/grid_wallpaper.png");
+    background-size: 50%;
+    background-blend-mode: color-dodge;
+    background-repeat: repeat;
+    }
 
 .banner {
     padding-top: 5px;
@@ -10,11 +15,12 @@ h1 {
 
 
 ul {
-    list-style-type: noneS;
+    list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: rgb(71, 115, 170);
+    background-color: #4773aa;
+    background-image: linear-gradient(#d5f1f4, #80cad6);
     border-radius: 11px;
     }
 
@@ -22,12 +28,21 @@ li {float: left;}
 
 li a {
     display: block;
-    color: white;
+    color: black;
+    font-weight: bolder;
     text-align: #ffffff;
     padding: 15px;
     text-decoration: none;
+    background-color: #4773aa;
+    background-image: linear-gradient(#d5f1f4, #80cad6);
     }
 
-li a:hover {background-color: #111111;}
+li a:hover {
+    background: linear-gradient(#80cad6, #5c9faa);
+    }
 
 a {font-family: Verdana;}
+
+main {
+    margin: 50px;
+}
