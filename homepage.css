@@ -5,9 +5,11 @@ body {
     background-repeat: repeat;
     }
 
+/*
 .banner {
     padding-top: 5px;
     }
+*/
 
 h1 {
     background: rgba(255, 255, 255, 0.5);
@@ -16,15 +18,14 @@ h1 {
 
 ul {
     list-style-type: none;
-    margin: 0;
+    margin-top: -21px;
+    margin-left: -10px;
     padding: 0;
-    overflow: hidden;
-    background-color: #4773aa;
-    background-image: linear-gradient(#d5f1f4, #80cad6);
-    border-radius: 11px;
+    width: 110px;
+    height: 100%;
+    background-color: #f1f1f1;
+    position: fixed;
     }
-
-li {float: left;}
 
 li a {
     display: block;
@@ -41,8 +42,11 @@ li a:hover {
     background: linear-gradient(#80cad6, #5c9faa);
     }
 
-a {font-family: Verdana;}
+li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+    }
 
-main {
-    margin: 50px;
-}
+a {
+    font-family: Verdana;
+    }
