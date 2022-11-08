@@ -5,23 +5,20 @@ body {
     background-repeat: repeat;
     }
 
-/*
-.banner {
-    padding-top: 5px;
-    }
-*/
+main {
+    margin-left: 220px;
+}
 
 h1 {
     background: rgba(255, 255, 255, 0.5);
     }
-
 
 ul {
     list-style-type: none;
     margin-top: -21px;
     margin-left: -10px;
     padding: 0;
-    width: 110px;
+    width: 200px;
     height: 100%;
     background-color: #f1f1f1;
     position: fixed;
@@ -31,11 +28,11 @@ li a {
     display: block;
     color: black;
     font-weight: bolder;
-    text-align: #ffffff;
-    padding: 17px;
+    text-align: center;
     text-decoration: none;
-    background-color: #4773aa;
-    background-image: linear-gradient(#d5f1f4, #80cad6);
+    padding: 17px;
+    border-radius: 30px;
+    background-color: #f1f1f1;
     }
 
 li a:hover {
