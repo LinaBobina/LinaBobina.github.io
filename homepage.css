@@ -32,16 +32,14 @@ li a {
     text-decoration: none;
     padding: 17px;
     border-radius: 30px;
-    background-color: #f1f1f1;
     }
 
 li a:hover {
-    background: linear-gradient(#80cad6, #5c9faa);
-    }
-
-li a:hover:not(.active) {
-    background-color: #555;
-    color: white;
+    background-color: rgb(200, 204, 212);
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    border: 1px solid;
     }
 
 a {
