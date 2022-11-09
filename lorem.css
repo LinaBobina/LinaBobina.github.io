@@ -1,0 +1,19 @@
+p {
+    color: red;
+    text-align: center;
+    background: rgba(0, 255, 0, 0.3);
+  }
+
+#idselect {
+    color: blue;
+    text-align: center;
+}
+
+p.classselect {
+    color: green;
+    text-align: center;
+}
+
+body {
+    background-color: antiquewhite;
+}
