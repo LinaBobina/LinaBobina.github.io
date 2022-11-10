@@ -1,27 +1,29 @@
 body {
     background-image: url("Images/grid_wallpaper.png");
-    background-size: 50%;
+    background-size: 500px;
     background-blend-mode: color-dodge;
     background-repeat: repeat;
+    background-attachment: sticky;
+    margin: 0;
+    padding: 0;
     }
 
-main {
-    margin-left: 220px;
-}
+.menu {
+    background-color: rgb(238, 238, 238);
+    display: inline-block;
+    height: 100%;
+    width: 200px;
+    position: fixed!important;
+}    
 
-h1 {
-    background: rgba(255, 255, 255, 0.5);
-    }
+
 
 ul {
     list-style-type: none;
-    margin-top: -8px;
-    margin-left: -10px;
+    margin: 0;
     padding: 0;
     width: 200px;
     height: 100%;
-    background-color: #f1f1f1;
-    position: fixed;
     }
 
 li a {
@@ -42,10 +44,20 @@ li a:hover {
     border: 2px solid;
     }
 
-a {
-    font-family: Verdana;
-    }
+a {font-family: Verdana;}
 
-.searchbar {
-    margin-left: 250px;
+h1 {background: rgba(255, 255, 255, 0.5);}
+
+main {margin-left: 220px;}
+
+section {
+    margin-left: 400px;
+    width: 50%;
 }
+
+.bird01 {
+    border: 7px ridge rgba(0, 102, 255, 0.253);
+    border-radius: 50%;
+}
+
+figcaption {background: rgba(255, 255, 255, 0.5);}
