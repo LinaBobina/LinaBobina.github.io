@@ -53,7 +53,18 @@ li {
 .cards {
     background-color: rgb(145, 190, 190);
     height: 300px;
-    width: 300px;
+    width: 25%;
+    margin: 0px 5px;
+}
+
+.cards:nth-last-child(1) {
+    margin: 0px 0px 0px 5px;
+    
+}
+
+.cards:nth-child(1) {
+    margin: 0px 5px 0px 0px;
+    
 }
 
 .cards:nth-child(odd) {
