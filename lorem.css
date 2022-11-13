@@ -49,6 +49,21 @@ li {
     margin: 0;
 }
 
+@media screen and (max-width: 600px) {
+    .cards-flex  {
+        flex-direction: column;
+        display: flex;
+    }
+
+    div .cards {
+        width: 100%;
+        margin: 0;
+    }
+
+    .cards:nth-last-child(1) {
+        margin: 0 !important;
+    }
+}
 
 .cards {
     background-color: rgb(145, 190, 190);
@@ -57,19 +72,11 @@ li {
     margin: 0px 5px;
 }
 
-.cards:nth-last-child(1) {
-    margin: 0px 0px 0px 5px;
-    
-}
+.cards:nth-last-child(1) {margin: 0px 0px 0px 5px;}
 
-.cards:nth-child(1) {
-    margin: 0px 5px 0px 0px;
-    
-}
+.cards:nth-child(1) {margin: 0px 5px 0px 0px;}
 
-.cards:nth-child(odd) {
-    background-color: rgb(117, 172, 172);
-}
+.cards:nth-child(odd) {background-color: rgb(117, 172, 172);}
 
 .card-header {
     display: inline-block;
