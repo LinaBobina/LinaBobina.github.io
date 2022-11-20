@@ -1,0 +1,36 @@
+
+body {
+    background: rgb(238,174,202);
+    background: linear-gradient(180deg, rgba(213,241,244,1) 0%, rgba(162,218,226,1) 49%, rgba(128,202,214,1) 100%);
+    background-attachment: fixed;
+}
+
+.navigation {
+    display: inline-flex;
+    background-color: white;
+    position: absolute;
+    width: 
+}
+
+li, .get-started-text {
+    font-family: sans-serif;
+    display: inline-flex;
+}
+
+li {padding-inline-start: 10px;}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.get-started-block {
+    background-color: rgb(118, 78, 207);
+    border-radius: 20px;
+}
+
+.get-started-text {
+    color: white;
+}
