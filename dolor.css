@@ -103,11 +103,10 @@ body {
 }
 
 #intro-text-parent {
-    background-color: coral;
-    height: 40%;
+    height: 35%;
     width: 50%;
     margin-top: 40px;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
     text-align: center;
 }
 
@@ -125,7 +124,7 @@ body {
 
 #intro-image-parent {
     display: inline-flex;
-    background-color: blue;
+    height: 280px;
     width: 30%;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -150,50 +149,14 @@ body {
 }
 
 .intro-image-child h1, .intro-image-child p {
+    color: black;
     text-align: center;
-    margin: 0px;
-
+    margin: 5px 0px;
 }
 
-
-
-/* #offering-container {
-    display: inline-flex;
-    width: 100%;
-    padding-top: 50px;
+.intro-image-child p {
+    color: rgb(52, 50, 50);
 }
-
-.offering-white-box {
-    background-color: rgb(255, 255, 255);
-    border: solid 1px transparent;
-    border-radius: 50px;
-    height: 800px;
-    width: 95%;
-    color: transparent;
-    margin: auto;
-}
-
-.offering-text {
-    display: inline-flex;
-    flex-direction: column;
-    color: black;
-    align-items: center;
-}
-
-.offering-text>p, .offering-text h5, .offering-text h1 {
-    margin: 0px 0px 15px 0px;
-}
-
-/* .bee, .dragonfly, .nature {
-    display: inline-flex;
-    color: black;
-    background-color: coral;
-    border-radius: 50px;
-    height: 25%;
-    justify-content: center;
-}
-
-
 
 
 /* Navigation - Media/Web Responsiveness */
