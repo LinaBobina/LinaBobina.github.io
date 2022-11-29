@@ -77,8 +77,6 @@ body {
     list-style-type: none;
 }
 
-
-
 /*///////////// Hero Banner*/
 .banner {
     display: flex;
@@ -113,14 +111,12 @@ body {
     padding: 0px;
 }
 
-
 /*/////// Intro images */
 .intro-image-container {
     display: inline-flex;
     align-items: center;
     justify-content: space-evenly;
 }
-
 
 #intro-image-parent {
     display: inline-flex;
@@ -129,7 +125,6 @@ body {
     margin-top: 10px;
     margin-bottom: 10px;
 }
-
 
 .intro-image-child {
     display: flex;
