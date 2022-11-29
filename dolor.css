@@ -42,10 +42,7 @@ body {
     align-items: center;
     margin: 0;
     padding: 60px 0px 0px 0px;
-}
-
-.header-text>p, .header-text h5, .header-text h1 {
-    margin: 0px 0px 15px 0px;
+    text-align: center;
 }
 
 .header-text h1 {
@@ -80,6 +77,8 @@ body {
     list-style-type: none;
 }
 
+
+
 /*///////////// Hero Banner*/
 .banner {
     display: flex;
@@ -87,34 +86,35 @@ body {
     text-align: center;
 }
 
- /*////////////// Offerings */
+.banner>p, .banner h5, .banner h1 {
+    margin: 0px 0px 15px 0px;
+}
 
-.intro-white-container {
+/*////// Intro offerings */
+.intro-container {
     display: flex;
     background-color: white;
     border-radius: 40px;
     width: 95%;
-    height: 800px;
+    height: 380px;
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
 }
 
-#intro-text-parent {
-    height: 35%;
-    width: 50%;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    text-align: center;
+.intro-container .header-text {
+    justify-content: center;
+    width: 380px;
 }
 
-.intro-text-child {
-    height: 200px;
-    text-align: center;
+.intro-container>p, .intro-container h5, .intro-container h1 {
+    margin: 0px;
+    padding: 0px;
 }
 
+
+/*/////// Intro images */
 .intro-image-container {
     display: inline-flex;
     align-items: center;
@@ -138,6 +138,7 @@ body {
     justify-content: center;
     flex-direction: column;
     margin: auto;
+    text-align: center;
 }
 
 .intro-image-child img {
@@ -156,10 +157,11 @@ body {
 
 .intro-image-child p {
     color: rgb(52, 50, 50);
-}
+} 
+
+
 
 
 /* Navigation - Media/Web Responsiveness */
 /* @media screen and (max-width: 768px) {
-} */
-
+} 
