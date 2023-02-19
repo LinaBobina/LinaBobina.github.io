@@ -24,8 +24,8 @@ function round(){
     let playerChoice = playerSelection(myChoices);
     let computerChoice = getComputerChoice(myChoices);
 
-    console.log("Player picks " + playerChoice)
-    console.log("Computer picks " + computerChoice)
+    document.getElementById("computerDialog").innerHTML = ("Computer picks " + computerChoice)
+    document.getElementById("playerDialog").innerHTML = ("Player picks " + computerChoice)
 
     if (computerChoice === "scissors" && playerChoice === "paper"){
         return loser
@@ -55,4 +55,5 @@ function round(){
         return tie
     }
 }
-console.log(round())
+
+document.getElementById("resultsDialog").innerHTML = round()
