@@ -1,31 +1,29 @@
-
-/*// PSUEDOCODE //*
-1. function getComputerChoice
-2. choices are rock, paper, scissors
-3. pick a random one
-4. print results */
-
 let myChoices = ["rock", "paper", "scissors"];
 
+// Computer's random choice
 function getComputerChoice(myChoices){
     let random = myChoices[Math.floor(Math.random()*myChoices.length)];
     return random
 }
 
-function playerSelection(myChoices){
-    let random = myChoices[Math.floor(Math.random()*myChoices.length)];
-    return random
+// Button for typing in option and is case-insensitive //
+function playerButton() {
+    let playerChoice = prompt("What do you pick?").toLowerCase()
+    if (playerChoice === "rock") {
+        playerChoice = playerChoice.charAt(0).toUpperCase() + playerChoice.slice(1)
+        return document.getElementById("playerDialog").innerHTML = "You picked " + playerChoice
+    }
+    else return document.getElementById("playerDialog").innerHTML = "Huh?"
 }
-
+ 
+/*
 function round(){
     let loser = "Ya lost. Try again."
     let winner = "BINGO. WINNER!"
     let tie = "No one won! Try again."
-    let playerChoice = playerSelection(myChoices);
     let computerChoice = getComputerChoice(myChoices);
 
     document.getElementById("computerDialog").innerHTML = ("Computer picks " + computerChoice)
-    document.getElementById("playerDialog").innerHTML = ("Player picks " + computerChoice)
 
     if (computerChoice === "scissors" && playerChoice === "paper"){
         return loser
@@ -55,5 +53,5 @@ function round(){
         return tie
     }
 }
-
 document.getElementById("resultsDialog").innerHTML = round()
+*/
