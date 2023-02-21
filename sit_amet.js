@@ -1,13 +1,5 @@
-let myChoices = ["rock", "paper", "scissors"];
-
-// Computer's random choice
-function getComputerChoice(myChoices){
-    let random = myChoices[Math.floor(Math.random()*myChoices.length)];
-    return random
-}
-
-// Button for typing in option and is case-insensitive //
-function playerButton() {
+//💋  Button for typing in option and is case-insensitive 💋 //
+function playerSelection() {
     let playerChoice = prompt("What do you pick?").toLowerCase()
     if (playerChoice === "rock") {
         playerChoice = playerChoice.charAt(0).toUpperCase() + playerChoice.slice(1)
@@ -15,15 +7,34 @@ function playerButton() {
     }
     else return document.getElementById("playerDialog").innerHTML = "Huh?"
 }
- 
+
+
+//💋 Computer's random choice 💋 //
+let myChoices = ["rock", "paper", "scissors"];
+
+function getComputerChoice(myChoices){
+    let random = myChoices[Math.floor(Math.random()*myChoices.length)];
+    // return console.log(random)
+    // return document.getElementById("computerDialog").innerHTML = random
+}
+
+
+//💋 One round of rock paper scissors 💋 //
+function singleRound(){
+
+}
+
+
+
+
+
+
 /*
 function round(){
     let loser = "Ya lost. Try again."
     let winner = "BINGO. WINNER!"
     let tie = "No one won! Try again."
-    let computerChoice = getComputerChoice(myChoices);
-
-    document.getElementById("computerDialog").innerHTML = ("Computer picks " + computerChoice)
+    let computerChoice = getComputerChoice(myChoices)
 
     if (computerChoice === "scissors" && playerChoice === "paper"){
         return loser
@@ -53,5 +64,6 @@ function round(){
         return tie
     }
 }
+
 document.getElementById("resultsDialog").innerHTML = round()
 */
