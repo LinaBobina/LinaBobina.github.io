@@ -1,0 +1,27 @@
+body {
+    background-color: #a9d9d9;
+    font-family: 'Work Sans', sans-serif;
+}
+
+h1 {
+    color: #561953;
+    text-shadow: 2px 2px 8px #e1c7e0;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.button-symbol {
+    background-color: transparent;
+    border: none;
+    font-size: 8rem;
+    padding: 20px 0px 20px 0px;
+}
+
+.button-symbol:hover {
+    font-size: 10rem;
+    cursor: pointer;
+}
