@@ -15,18 +15,25 @@
         <a href="/homepage.html">Go back home!</a>
 
         <h1> Welcome to Rock, Paper, Scissors!</h1>
+        <p>How to play: First, select an option from below. Then click on "Go!" when you'd like the round to start. Best out of 3 wins!</p>
 
-        <div class="button-container">
-            <button id="rockBtn" class="button-symbol">🪨</button>
-            <button id="paperBtn" class="button-symbol">📄</button>
-            <button id="scissorsBtn" class="button-symbol">✂️</button>
+        <div class="buttonSymbol-container">
+            <button id="buttonSymbol-rockBtn" class="buttonSymbol">🪨</button>
+            <button id="buttonSymbol-paperBtn" class="buttonSymbol">📄</button>
+            <button id="buttonSymbol-scissorsBtn" class="buttonSymbol">✂️</button>
         </div>
 
-        <div class="dialog-container">
+        <div class="playerDialog-container">
             <p id="playerDialog"></p>
-            <p id="computerDialog"></p>
-            <p id="resultsDialog"></p>
         </div>
+
+        <button id="roundStartBtn">Go!</button>
+
+        <p id="computerDialog"></p>
+
+        <p id="resultsDialog"></p>
+
+        <span id="score">0</span>
 
         <script src="./rockPaperScissors.js"></script>
     </body>

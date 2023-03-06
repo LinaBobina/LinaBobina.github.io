@@ -1,100 +1,96 @@
+let options = ["rock", "paper", "scissors"];
+let loser = "You lost. Try again."
+let winner = "BINGO. WINNER!"
+let tie = "No one won! Try again."
 
-/*// PSUEDOCODE //*
-1. function determineComputerChoice
-2. choices are rock, paper, scissors
-3. pick random one
-4. print results */
-
-
-
-
-
-///////// VARIABLES
-let computerChoice = ["rock", "paper", "scissors"];
-
-//////////// Computer's random generated determined choice // 
+// determine computer's choice  
 function getComputerChoice(){
-    let random = computerChoice[Math.floor(Math.random()*computerChoice.length)];
-    document.getElementById("computerDialog").innerHTML = "Computer picked " + random + "!"
+    let random = options[Math.floor(Math.random()*options.length)];
+    console.log("computer: " + random)
     return random
 }
 
+// determine player's choice
+function getPlayerChoice () {
+    const choice = event.target.id;
 
-// Player button and choice being stored
-const buttons = document.querySelectorAll('button');
+    switch (choice) {
+        case 'buttonSymbol-rockBtn':
+            console.log("player: rock");
+            return "rock";
+        case 'buttonSymbol-paperBtn':
+            console.log("player: paper");
+            return "paper";
+        case 'buttonSymbol-scissorsBtn':
+            console.log("player: scissors");
+            return "scissors";
+        default:
+            console.log("player: N/A");
+    }
+}
+
+
+// compare player's choice to computer's choice
+function playRound(playerChoice, computerChoice){
+    if (playerChoice === "scissors" && computerChoice === "paper"){
+        return winner
+    }
+    else if (playerChoice === "scissors" && computerChoice === "rock"){
+        return loser
+    }
+    else if (playerChoice === "scissors" && computerChoice === "scissors"){
+        return tie
+    }
+    else if (playerChoice === "rock" && computerChoice === "paper"){
+        return loser
+    }
+    else if (playerChoice === "rock" && computerChoice === "scissors"){
+        return winner
+    }
+    else if (playerChoice === "rock" && computerChoice === "rock"){
+        return tie
+    }
+    else if (playerChoice === "paper" && computerChoice === "scissors"){
+        return loser
+    }
+    else if (playerChoice === "paper" && computerChoice === "rock"){
+        return winner
+    }
+    else if (playerChoice === "paper" && computerChoice === "paper"){
+        return tie
+    }
+
+}
+
+// player's button behaviour and printed results
+const buttons = document.querySelectorAll("div.buttonSymbol-container > button");
 const playerDialog = document.getElementById("playerDialog");
 
 Array.from(buttons).forEach(button => { 
     button.addEventListener('click', () => {
         let playerChoice = getPlayerChoice();
-        let computerChoice = getComputerChoice();
-        playerDialog.innerHTML = `Player picked ${playerChoice}!`;
+        playerDialog.innerHTML = `You've picked ${playerChoice}!`;
         playerDialog.classList.remove('fade-in');
         void playerDialog.offsetWidth;
         playerDialog.classList.add('fade-in');
-        return singleRound(playerChoice, computerChoice)
+        document.getElementById("roundStartBtn").addEventListener("click", () => game(playerChoice));
     });
 });
 
 
+// round 1 
+function game(playerChoice) {
+    const computerChoice = getComputerChoice();
+    const score = document.getElementById("score");
+    const result = playRound(playerChoice, computerChoice)
 
-
-function getPlayerChoice () {
-    const choice = event.target.id;
-
-    switch (choice) {
-        case 'rockBtn':
-            return "rock";
-        case 'paperBtn':
-            return "paper";
-        case 'scissorsBtn':
-            return "scissors";
-        default:
-            console.log("nothing");
+    if (result === winner) {
+        score.innerHTML = parseInt(score.innerHTML) + 1;
     }
-}
-
-// determine winner of round
-function singleRound(playerChoice, computerChoice){
-    let loser = "You lost. Try again."
-    let winner = "BINGO. WINNER!"
-    let tie = "No one won! Try again."
-
-    if (playerChoice === "scissors" && computerChoice === "paper"){
-        document.getElementById("resultsDialog").innerHTML = winner
-        return winner
-    }
-    else if (playerChoice === "scissors" && computerChoice === "rock"){
-        document.getElementById("resultsDialog").innerHTML = loser
-        return loser
-    }
-    else if (playerChoice === "scissors" && computerChoice === "scissors"){
-        document.getElementById("resultsDialog").innerHTML = tie
-        return tie
-    }
-    else if (playerChoice === "rock" && computerChoice === "paper"){
-        document.getElementById("resultsDialog").innerHTML = loser
-        return loser
-    }
-    else if (playerChoice === "rock" && computerChoice === "scissors"){
-        document.getElementById("resultsDialog").innerHTML = winner
-        return winner
-    }
-    else if (playerChoice === "rock" && computerChoice === "rock"){
-        document.getElementById("resultsDialog").innerHTML = tie
-        return tie
-    }
-    else if (playerChoice === "paper" && computerChoice === "scissors"){
-        document.getElementById("resultsDialog").innerHTML = loser
-        return loser
-    }
-    else if (playerChoice === "paper" && computerChoice === "rock"){
-        document.getElementById("resultsDialog").innerHTML = winner
-        return winner
-    }
-    else if (playerChoice === "paper" && computerChoice === "paper"){
-        document.getElementById("resultsDialog").innerHTML = tie
-        return tie
+    else if (result === loser) {
+        score.innerHTML = parseInt(score.innerHTML) + 0;
     }
 
+    const resultsDialog = document.getElementById("resultsDialog");
+    resultsDialog.innerHTML = result;
 }
