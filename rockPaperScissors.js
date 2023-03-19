@@ -31,66 +31,66 @@ function getPlayerChoice () {
 
 
 // compare player's choice to computer's choice
-function playRound(playerChoice, computerChoice){
-    if (playerChoice === "scissors" && computerChoice === "paper"){
+function playRound(getPlayerChoice, getComputerChoice){
+    if (getPlayerChoice === "scissors" && getComputerChoice === "paper"){
         return winner
     }
-    else if (playerChoice === "scissors" && computerChoice === "rock"){
+    else if (getPlayerChoice === "scissors" && getComputerChoice === "rock"){
         return loser
     }
-    else if (playerChoice === "scissors" && computerChoice === "scissors"){
+    else if (getPlayerChoice === "scissors" && getComputerChoice === "scissors"){
         return tie
     }
-    else if (playerChoice === "rock" && computerChoice === "paper"){
+    else if (getPlayerChoice === "rock" && getComputerChoice === "paper"){
         return loser
     }
-    else if (playerChoice === "rock" && computerChoice === "scissors"){
+    else if (getPlayerChoice === "rock" && getComputerChoice === "scissors"){
         return winner
     }
-    else if (playerChoice === "rock" && computerChoice === "rock"){
+    else if (getPlayerChoice === "rock" && getComputerChoice === "rock"){
         return tie
     }
-    else if (playerChoice === "paper" && computerChoice === "scissors"){
+    else if (getPlayerChoice === "paper" && getComputerChoice === "scissors"){
         return loser
     }
-    else if (playerChoice === "paper" && computerChoice === "rock"){
+    else if (getPlayerChoice === "paper" && getComputerChoice === "rock"){
         return winner
     }
-    else if (playerChoice === "paper" && computerChoice === "paper"){
+    else if (getPlayerChoice === "paper" && getComputerChoice === "paper"){
         return tie
     }
-
 }
 
-// player's button behaviour and printed results
-const buttons = document.querySelectorAll("div.buttonSymbol-container > button");
-const playerDialog = document.getElementById("playerDialog");
+// DOM for Player Selection results
+const containerPD = document.querySelector('#container-playerDialog');
+const contentPD = document.createElement('div')
+contentPD.classList.add('contentPD');
+containerPD.appendChild(contentPD);
 
-Array.from(buttons).forEach(button => { 
-    button.addEventListener('click', () => {
-        let playerChoice = getPlayerChoice();
-        playerDialog.innerHTML = `You've picked ${playerChoice}!`;
-        playerDialog.classList.remove('fade-in');
-        void playerDialog.offsetWidth;
-        playerDialog.classList.add('fade-in');
-        document.getElementById("roundStartBtn").addEventListener("click", () => game(playerChoice));
-    });
+// DOM for Computer Selection results
+const containerCD = document.querySelector('#container-computerDialog');
+const contentCD = document.createElement('div')
+contentCD.classList.add('contentCD');
+containerCD.appendChild(contentCD);
+
+// DOM for Round results
+const containerResults = document.querySelector('#container-results');
+const contentResults = document.createElement('div')
+contentResults.classList.add('contentResults');
+containerResults.appendChild(contentResults);
+
+// Add event listener to buttons that call on 'playRound' function
+// with the correct 'playerSelection' every time a button is clicked
+const buttons = document.querySelectorAll(".buttonSymbol");
+buttons.forEach(button => {
+    button.addEventListener("click", () => {
+        const playerSelection = getPlayerChoice();
+        const computerSelection = getComputerChoice();
+        const round = playRound(playerSelection, computerSelection);
+        
+        contentPD.textContent = "You've selected " + playerSelection;
+        contentCD.textContent = "Computer selected " + computerSelection;
+        contentResults.textContent = "Results: " + round;
+
+    })
 });
-
-
-// round 1 
-function game(playerChoice) {
-    const computerChoice = getComputerChoice();
-    const score = document.getElementById("score");
-    const result = playRound(playerChoice, computerChoice)
-
-    if (result === winner) {
-        score.innerHTML = parseInt(score.innerHTML) + 1;
-    }
-    else if (result === loser) {
-        score.innerHTML = parseInt(score.innerHTML) + 0;
-    }
-
-    const resultsDialog = document.getElementById("resultsDialog");
-    resultsDialog.innerHTML = result;
-}
