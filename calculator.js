@@ -21,13 +21,11 @@ pixelBtn.addEventListener("click", () => {
         const contentHover = document.querySelectorAll(".content");
         contentHover.forEach(hover => {
         hover.addEventListener("mouseover", () => {
-        console.log("hover event");
         event.target.style.backgroundColor = "black";
-    });
-});
-
+            });
+        });
     }
-})
+});
 
 const contentHover = document.querySelectorAll(".content");
 contentHover.forEach(hover => {
