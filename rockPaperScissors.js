@@ -92,5 +92,16 @@ buttons.forEach(button => {
         contentCD.textContent = "Computer selected " + computerSelection;
         contentResults.textContent = "Results: " + round;
 
+        const playerScore = document.querySelector("#playerScore");
+        const computerScore = document.querySelector("#computerScore");
+
+        if (round === winner){
+            playerScore.textContent = parseInt(playerScore.textContent) + 1; 
+        }
+        else if (round === loser) {
+            computerScore.textContent = parseInt(computerScore.textContent) + 1;
+        }
+
     })
 });
+
