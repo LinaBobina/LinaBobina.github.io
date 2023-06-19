@@ -1,61 +1,162 @@
-* {
-  font-family: Helvetica;
-}
 
 body {
-  background-color: rgb(35, 25, 85);
+    background: rgb(238,174,202);
+    background: linear-gradient(180deg, rgba(213,241,244,1) 0%, rgba(162,218,226,1) 56%, rgba(162,218,226,1) 80%, rgb(255, 255, 255) 100%);
+    background-size: 100% 1300px;
+    background-repeat: no-repeat;
+    font-family: sans-serif;
+    font-size: 18px;
+    color: grey;
 }
 
-fieldset {
-    width: 400px;
-    background-color: rgb(255, 229, 180);
-    border-radius: 5%;
+/*////////// Green-button */
+.green-button-parent {
+    padding: 13px;
+    box-sizing: border-box;
+}
+
+.green-button-child {
+    display: inline-flex;
+    align-items: center;
+    padding-left: 15px;
+    margin: 0;
+    background-color: rgb(87, 167, 97);
+    color: white;
+    border-radius: 50px;
+    width: 160px;
+    height: 55px;
+}
+
+.green-button-child img {
+    margin: auto;
+    padding: 8px 5px;
+    border: solid 1px transparent;
+    border-radius: 50%;
+    background-color: rgb(64, 141, 74);
+}
+
+/*/////////// Header Text */
+.header-text {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 60px 0px 0px 0px;
     text-align: center;
-    padding-top: 30px;
 }
 
-legend {
+.header-text h1 {
+    color: rgb(60, 60, 60);
+}
+
+/*//////////// Navigation - Body */
+.nav-parent {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-child {
+    display: flex;
+    justify-content: right;
+    background-color: white;
+    border-radius: 50px;
+    padding-left: 20px;
+    margin-top: 25px;
+    width: 1200px;
+}
+
+.nav-child ul {
+    display: inline-flex;
+    align-items: center;
+    padding-right: 10px
+}
+
+.nav-child li {
+    padding-left: 15px;
+    list-style-type: none;
+}
+
+/*///////////// Hero Banner*/
+.banner {
+    display: flex;
+    justify-content: center;
     text-align: center;
-    background-color: rgb(232, 170, 66);
-    color: rgb(0,0,54);
-    border-style: solid;
-    border-radius: 10px;
-    padding: 15px;
-    text-emphasis-style: bold;
-    font-weight: 900;
-  }
-
-
-#dodo + label:after {
-  display: block;
-  content: " ";
-  margin-bottom: -45px;
 }
 
-input {
-  width: auto;
-  padding: 10px 50px;
-  border-bottom: 2px solid rgb(232, 170, 66);
-  border-radius: 12px;
-  margin-top: 6px;
-  margin-bottom: 35px;
+.banner>p, .banner h5, .banner h1 {
+    margin: 0px 0px 15px 0px;
 }
 
-input:focus {
-  background-color: rgb(249, 249, 249);
+/*////// Intro offerings */
+.intro-container {
+    display: flex;
+    background-color: white;
+    border-radius: 40px;
+    width: 95%;
+    height: 380px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
 }
 
-input[type=text] {
-  background-image: url(Images/user_trans01.png);
-  background-repeat: no-repeat;
-  background-size: 8%;
-  background-position: 6px 6px;
+.intro-container .header-text {
+    justify-content: center;
+    width: 380px;
 }
 
-input[type=password] {
-  background-image: url(Images/passcode_trans01.png);
-  background-repeat: no-repeat;
-  background-size: 8%;
-  background-position: 6px 6px;
+.intro-container>p, .intro-container h5, .intro-container h1 {
+    margin: 0px;
+    padding: 0px;
 }
 
+/*/////// Intro images */
+.intro-image-container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#intro-image-parent {
+    display: inline-flex;
+    height: 280px;
+    width: 30%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.intro-image-child {
+    display: flex;
+    width: 100%;
+    height: 90%;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+}
+
+.intro-image-child img {
+    display: flex;
+    width: 160px;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+}
+
+.intro-image-child h1, .intro-image-child p {
+    color: black;
+    text-align: center;
+    margin: 5px 0px;
+}
+
+.intro-image-child p {
+    color: rgb(52, 50, 50);
+} 
+
+
+
+
+/* Navigation - Media/Web Responsiveness */
+/* @media screen and (max-width: 768px) {
+} 
